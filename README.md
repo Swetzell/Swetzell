@@ -1,16 +1,21 @@
-## Hi there 👋
+👋 ¡Hola! Soy Stefano Wetzell Ciccia
 
-<!--
-**Swetzell/Swetzell** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+🎓 Estudiante de Ingeniería de Software, apasionado por el desarrollo de aplicaciones modernas y eficientes.
 
-Here are some ideas to get you started:
+🚀 Tecnologías y herramientas
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+Lenguajes y frameworks: Java, Spring, .NET, JavaScript, React
+
+Bases de datos: SQLServer y MySQL
+
+Intereses: Desarrollo web, backend, y mejora continua en tecnología y buenas prácticas
+
+🌱 Actualmente
+
+Aprendiendo: Más sobre desarrollo web y bases de datos.
+
+Trabajando en proyectos: Explorando nuevas aplicaciones con tecnologías backend y frontend.
+
+📫 Contacto LinkedIn: www.linkedin.com/in/stefano-wetzell-ciccia-314a591a1
+
+Email: stefanowetzell@gmail.com
