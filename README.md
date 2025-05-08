@@ -23,15 +23,15 @@
 ## 📊 Estadísticas de GitHub
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=stefanowetzell&show_icons=true&theme=tokyonight&locale=es" alt="GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api?username=Swetzell&show_icons=true&theme=tokyonight&locale=es" alt="GitHub Stats" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=stefanowetzell&layout=compact&theme=tokyonight&locale=es" alt="Top Langs" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Swetzell&layout=compact&theme=tokyonight&locale=es" alt="Top Langs" />
 </p>
 
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=stefanowetzell&theme=dracula&margin-w=10&margin-h=10" alt="GitHub Trophies" />
+  <img src="https://github-profile-trophy.vercel.app/?username=Swetzell&theme=dracula&margin-w=10&margin-h=10" alt="GitHub Trophies" />
 </p>
 
 ## 📫 Contacto
