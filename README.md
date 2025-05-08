@@ -20,6 +20,19 @@
 - **Trabajando en proyectos**: Explorando nuevas aplicaciones con tecnologías backend y frontend.
 
 ---
+## 📊 Estadísticas de GitHub
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=stefanowetzell&show_icons=true&theme=tokyonight&locale=es" alt="GitHub Stats" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=stefanowetzell&layout=compact&theme=tokyonight&locale=es" alt="Top Langs" />
+</p>
+
+<p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=stefanowetzell&theme=dracula&margin-w=10&margin-h=10" alt="GitHub Trophies" />
+</p>
 
 ## 📫 Contacto
 
