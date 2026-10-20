@@ -40,7 +40,8 @@ Desarrollo backends en Java para procesos reales de negocio. Lidero técnicament
 ### Estadísticas
 
 <p align="center">
-  <img src="profile/stats.svg" alt="Estadísticas de GitHub">
+  <img src="profile/stats.svg" alt="Estadísticas de GitHub" height="180">
+  <img src="profile/top-langs.svg" alt="Lenguajes más usados" height="180">
 </p>
 
 <p align="center"><sub>Mi trabajo principal está en repositorios privados: las estadísticas incluyen esas contribuciones sin exponer el código.</sub></p>
