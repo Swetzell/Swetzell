@@ -13,39 +13,36 @@ jobs:
     runs-on: ubuntu-latest
     env:
       # Fondo transparente y colores legibles en modo claro y oscuro
-      ESTILO: show_icons=true&hide_rank=true&hide_border=true&theme=transparent&title_color=2F81F7&icon_color=2F81F7&text_color=6E7781&disable_animations=true
-      # Los secretos no se pueden usar directo en "if", por eso se pasan a esta variable
-      CON_TOKEN: ${{ secrets.STATS_TOKEN != '' }}
+      ESTILO: hide_border=true&theme=transparent&title_color=2F81F7&icon_color=2F81F7&text_color=6E7781&disable_animations=true
     steps:
       - uses: actions/checkout@v6
 
-      # Sin STATS_TOKEN: solo "Total Contributions" de todos los años. Incluye tus contribuciones
-      # privadas porque activaste "Include private contributions on my profile".
-      - name: Estadísticas (sin token)
-        if: env.CON_TOKEN != 'true'
-        uses: stats-organization/github-readme-stats-action@v2
+      # Requiere el secreto STATS_TOKEN: PAT clásico con scopes repo y read:user.
+      # Con él, commits, PRs, reviews y lenguajes incluyen tus repos privados (sin mostrar nombres ni código).
+      # La Action va fijada a un commit (v2.1.0) para que una actualización ajena no pueda tocar tu token.
+      # fail_on_error: si algo falla (token vencido, límite de la API), el run falla y se quedan las tarjetas anteriores.
+      - name: Tarjeta de estadísticas
+        uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2.1.0
         with:
           card: stats
-          options: username=${{ github.repository_owner }}&show=contributions&hide=stars,commits,prs,issues,contribs&${{ env.ESTILO }}
-          path: profile/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      # Con STATS_TOKEN (PAT clásico con scopes repo y read:user): commits, PRs y reviews
-      # también cuentan lo que haces en repos privados.
-      - name: Estadísticas (con token)
-        if: env.CON_TOKEN == 'true'
-        uses: stats-organization/github-readme-stats-action@v2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&show=contributions,reviews,prs_merged&hide=stars,issues,contribs&${{ env.ESTILO }}
+          options: username=${{ github.repository_owner }}&show_icons=true&hide_rank=true&show=contributions,reviews,prs_merged&hide=stars,issues,contribs&${{ env.ESTILO }}
           path: profile/stats.svg
           token: ${{ secrets.STATS_TOKEN }}
+          fail_on_error: true
+
+      - name: Tarjeta de lenguajes
+        uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2.1.0
+        with:
+          card: top-langs
+          options: username=${{ github.repository_owner }}&layout=compact&langs_count=6&hide=html,css&${{ env.ESTILO }}
+          path: profile/top-langs.svg
+          token: ${{ secrets.STATS_TOKEN }}
+          fail_on_error: true
 
       - name: Guardar tarjetas
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git rm -f --ignore-unmatch profile/top-langs.svg
-          git add profile/stats.svg
+          git add profile/stats.svg profile/top-langs.svg
           git commit -m "Actualiza estadísticas del README" || exit 0
           git push
